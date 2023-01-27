@@ -4,14 +4,15 @@ export class CardSection extends Component {
   render() {
     return (
         <div>
+        <center>
         <div className="fs-1 fw-bold m-3 text-Capitalize"
             style={{ fontFamily: 'NHaasGroteskDSPro-65Md', marginTop: '3px !important', marginBottom: '0px !important' }}>
             {this.props.coinName}
         </div>
-        <section className="row m-3 mb-0" style={{ marginTop: ' 2px !important' }}>
+        <section className="row m-3 mb-0" style={{ marginTop: ' 2px !important', display:'flex', justifyContent: 'center' }}>
             <div className="card text-white text-center  m-3"
-                style={{ width: "11rem", backgroundColor: "rgb(43, 43, 43)", marginTop: "0px !important" }}>
-                <div className="card-body">
+                style={{ width: "11rem", backgroundColor: "rgb(43, 43, 43)", marginTop: "0px "}}>
+                <div className="card-body" >
                     <h6 className="card-title" style={{ fontFamily: 'NHaasGroteskDSPro-65Md' }}>Market Cap 24Hrs</h6>
                     <p className="card-text fw-bold fs-5" style={{ color: "#fcdf03" }}>
                         {this.props.mCap24} %
@@ -27,7 +28,7 @@ export class CardSection extends Component {
                     </p>
                 </div>
             </div>
-            <div className="card text-white text-center  m-3"
+            {/* <div className="card text-white text-center  m-3"
                 style={{ width: "11rem", backgroundColor: "rgb(43, 43, 43)", marginTop: "0px !important" }}>
                 <div className="card-body">
                     <h6 className="card-title" style={{ fontFamily: 'NHaasGroteskDSPro-65Md' }}>All Time High</h6>
@@ -35,7 +36,7 @@ export class CardSection extends Component {
                         ${this.props.atl}
                     </p>
                 </div>
-            </div>
+            </div> */}
 
             <div className="card text-white text-center  m-3"
                 style={{ width: "11rem", backgroundColor: "rgb(43, 43, 43)", marginTop: "0px !important" }}>
@@ -77,6 +78,7 @@ export class CardSection extends Component {
                 ${this.props.currentPrice}
             </div>
         </div>
+        </center>
     </div>
     )
   }
